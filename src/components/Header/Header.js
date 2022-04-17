@@ -16,6 +16,11 @@ const Header = () => {
         <Link to="/Products">Products</Link>
         <Link to="/Orders">Orders</Link>
         <Link to="/Register">Register</Link>
+        {user && (
+          <>
+            <Link to="/vip">VIP</Link>
+          </>
+        )}
         <span>{user?.displayName && user.displayName}</span>
         {user?.uid ? (
           <button onClick={() => signOut(auth)}>sign out</button>
